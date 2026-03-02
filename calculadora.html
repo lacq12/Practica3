@@ -46,29 +46,15 @@
     </section>
 
     <section class="container calc" aria-label="Calculadora">
-      <!-- Orden de inputs: Monto -> Plazo -> Tasa (para que los selectores ~ funcionen) -->
-      <div class="options">
-        <div class="group">
-          <h3>Monto</h3>
-          <div class="choices">
-            <input type="radio" name="monto" id="m-50000"><label class="choice" for="m-50000">RD$ 50,000.00</label><input type="radio" name="monto" id="m-100000" checked><label class="choice" for="m-100000">RD$ 100,000.00</label><input type="radio" name="monto" id="m-150000"><label class="choice" for="m-150000">RD$ 150,000.00</label><input type="radio" name="monto" id="m-200000"><label class="choice" for="m-200000">RD$ 200,000.00</label><input type="radio" name="monto" id="m-300000"><label class="choice" for="m-300000">RD$ 300,000.00</label>
-          </div>
-        </div>
-        <div class="group">
-          <h3>Plazo</h3>
-          <div class="choices">
-            <input type="radio" name="plazo" id="p-12"><label class="choice" for="p-12">12 meses</label><input type="radio" name="plazo" id="p-24" checked><label class="choice" for="p-24">24 meses</label><input type="radio" name="plazo" id="p-36"><label class="choice" for="p-36">36 meses</label><input type="radio" name="plazo" id="p-48"><label class="choice" for="p-48">48 meses</label><input type="radio" name="plazo" id="p-60"><label class="choice" for="p-60">60 meses</label>
-          </div>
-        </div>
-        <div class="group">
-          <h3>Tasa referencial</h3>
-          <div class="choices">
-            <input type="radio" name="tasa" id="t-0_95"><label class="choice" for="t-0_95">0.95% mensual</label><input type="radio" name="tasa" id="t-1_0" checked><label class="choice" for="t-1_0">1.00% mensual</label><input type="radio" name="tasa" id="t-1_0999999999999999"><label class="choice" for="t-1_0999999999999999">1.10% mensual</label>
-          </div>
-        </div>
+      <div class="calc-controls">
+        <h3 class="group-title">Monto</h3>
+        <input type="radio" name="monto" id="m-50000"><label class="choice" for="m-50000">RD$ 50,000.00</label><input type="radio" name="monto" id="m-100000" checked><label class="choice" for="m-100000">RD$ 100,000.00</label><input type="radio" name="monto" id="m-150000"><label class="choice" for="m-150000">RD$ 150,000.00</label><input type="radio" name="monto" id="m-200000"><label class="choice" for="m-200000">RD$ 200,000.00</label><input type="radio" name="monto" id="m-300000"><label class="choice" for="m-300000">RD$ 300,000.00</label>
+        <h3 class="group-title">Plazo</h3>
+        <input type="radio" name="plazo" id="p-12"><label class="choice" for="p-12">12 meses</label><input type="radio" name="plazo" id="p-24" checked><label class="choice" for="p-24">24 meses</label><input type="radio" name="plazo" id="p-36"><label class="choice" for="p-36">36 meses</label><input type="radio" name="plazo" id="p-48"><label class="choice" for="p-48">48 meses</label><input type="radio" name="plazo" id="p-60"><label class="choice" for="p-60">60 meses</label>
+        <h3 class="group-title">Tasa referencial</h3>
+        <input type="radio" name="tasa" id="t-0_95"><label class="choice" for="t-0_95">0.95% mensual</label><input type="radio" name="tasa" id="t-1_0" checked><label class="choice" for="t-1_0">1.00% mensual</label><input type="radio" name="tasa" id="t-1_0999999999999999"><label class="choice" for="t-1_0999999999999999">1.10% mensual</label>
       </div>
 
-      <!-- Resultados precomputados (se muestra solo la combinación activa) -->
       <div class="calc-results">
         <div class="resultado res-m-50000-p-12-t-0_95">
               <h4>Resultado para RD$ 50,000.00 · 12 meses · 0.95% mensual</h4>
