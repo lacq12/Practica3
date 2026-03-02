@@ -26,6 +26,7 @@ img{max-width:100%;height:auto}
 .topbar{position:sticky;top:0;z-index:50;background:var(--color-surface);border-bottom:1px solid #e6edf0}
 .logo{display:inline-flex;gap:10px;align-items:center;text-decoration:none;color:var(--color-text);font-weight:600}
 .logo-text strong{color:var(--color-primary)}
+.logo-img{display:block;width:28px;height:28px}
 
 .main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:8px}
 .main-nav a{display:block;padding:12px 14px;text-decoration:none;color:var(--color-text);border-radius:10px}
@@ -48,7 +49,7 @@ img{max-width:100%;height:auto}
 .hamburger{display:none;cursor:pointer;padding:10px}
 .hamburger span{display:block;width:26px;height:3px;background:#173f4a;margin:5px 0;border-radius:2px}
 
-/* Hero wrapper (solo espaciado, el fondo lo pone cada slide) */
+/* Hero wrapper (espaciado) */
 .hero{padding:48px 0}
 
 /* Features */
@@ -64,7 +65,7 @@ img{max-width:100%;height:auto}
 .help-grid{grid-template-columns:1fr 1fr}
 .help-list{list-style:inside;line-height:2}
 
-/* Page hero (para páginas internas) */
+/* Page hero (páginas internas) */
 .page-hero{background:linear-gradient(135deg,var(--color-primary-600),var(--color-primary));color:#fff;padding:32px 0;margin-bottom:24px}
 .page-hero h1{margin:0}
 
@@ -96,11 +97,8 @@ button{font:inherit}
 .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#fff;padding:8px;border-radius:8px;z-index:100}
 
 /* ===================== */
-/*   LOGO & CAROUSEL     */
+/*   CARRUSEL (CSS PURO) */
 /* ===================== */
-.logo-img{display:block;width:28px;height:28px}
-
-/* Carrusel sin JS (radios + CSS) */
 .carousel{position:relative;overflow:hidden;border-radius:18px;box-shadow:var(--shadow);background:transparent}
 .carousel input{position:absolute;left:-9999px}
 .slides{display:flex;transition:transform .5s ease;min-height:300px}
