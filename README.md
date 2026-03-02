@@ -1,6 +1,6 @@
 # Banco Estudiantil (HTML + CSS)
 
-Sitio estático de ejemplo con estructura tipo banca: navegación, portada con carrusel sin JavaScript, productos (Préstamos, Becas, Maestrías), Centro de ayuda, Contacto y páginas informativas.
+Sitio estático con navegación, **carrusel sin JS**, **calculadora sin JS**, productos (Préstamos, Becas, Maestrías), Centro de ayuda, Contacto y Términos.
 
 ## Estructura
 ```
@@ -8,12 +8,12 @@ Sitio estático de ejemplo con estructura tipo banca: navegación, portada con c
 ├─ index.html
 ├─ prestamos.html
 ├─ becas.html
-├─ calculadora.html
 ├─ maestrias.html
 ├─ nosotros.html
 ├─ ayuda.html
 ├─ contacto.html
 ├─ terminos.html
+├─ calculadora.html
 └─ assets/
    ├─ css/
    │  └─ styles.css
@@ -26,14 +26,11 @@ Sitio estático de ejemplo con estructura tipo banca: navegación, portada con c
 2. Ve a **Settings → Pages**.
 3. En **Source**, elige **Deploy from a branch**.
 4. Selecciona la rama **main** y la carpeta **root**.
-5. Guarda y espera unos segundos hasta que salga el enlace público.
+5. Guarda y espera el enlace público.
 
-> Consejo: incluye el archivo `.nojekyll` (ya agregado) para evitar que GitHub Pages procese Jekyll.
+Notas:
+- Carrusel implementado con **radios + CSS**.
+- Calculadora implementada con **radios + CSS** (combinación de hermanos `~`).
+- Paleta ajustable en `assets/css/styles.css`.
 
-## Notas
-- Carrusel implementado con HTML/CSS (radios + labels), accesible y sin JS.
-- Logo en SVG, escalable y ligero.
-- Paleta y tipografía fácilmente ajustables desde `assets/css/styles.css`.
-
----
 © 2026 Banco Estudiantil — Demostrativo.
