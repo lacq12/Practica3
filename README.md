@@ -8,6 +8,7 @@ Sitio estático de ejemplo con estructura tipo banca: navegación, portada con c
 ├─ index.html
 ├─ prestamos.html
 ├─ becas.html
+├─ calculadora.html
 ├─ maestrias.html
 ├─ nosotros.html
 ├─ ayuda.html
