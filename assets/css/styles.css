@@ -135,94 +135,34 @@ button{font:inherit}
 @media (min-width: 960px){.slides{min-height:360px}}
 
 /* ===================== */
-/*   CALCULADORA        */
+/* CALCULADORA (Interactiva) */
 /* ===================== */
-.calc{padding:24px 0}
-.calc h3.group-title{margin:14px 0 6px 0;font-size:1rem;color:var(--color-primary-600)}
-.calc input[type=radio]{position:absolute;left:-9999px}
-.calc label.choice{display:inline-flex;align-items:center;gap:8px;border:1px solid #cbd6dc;border-radius:999px;padding:8px 12px;cursor:pointer;background:#fff;color:var(--color-text);font-weight:600;margin:6px 8px 6px 0}
-.calc input[type=radio]:checked + label.choice{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(10,77,104,.12)}
-.calc-results{margin-top:12px}
-.calc-results .resultado{display:none;background:var(--color-surface);border:1px solid #e6edf0;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-.calc-results .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.calc-results .stat{background:#f7fafb;border:1px solid #e6edf0;border-radius:12px;padding:12px}
-.calc-results .stat .lbl{color:var(--color-muted);font-size:.9rem}
-.calc-results .stat .val{font-weight:700;font-size:1.15rem}
-@media (max-width: 720px){.calc-results .grid{grid-template-columns:1fr}}
+.calc-form{display:grid;gap:18px;margin:18px 0}
+.calc-row{display:grid;grid-template-columns:260px 1fr;gap:14px;align-items:center}
+.calc-row .ctrl{display:grid;gap:8px}
+.calc-row label{font-weight:600;color:var(--color-primary-600)}
+.calc-row input[type=number]{max-width:280px}
+input[type=range]{width:100%}
 
-/* Visibilidad de combinaciones (CSS puro) */
-#m-50000:checked ~ #p-12:checked ~ #t-0_95:checked ~ .calc-results .res-m-50000-p-12-t-0_95{display:block}
-#m-50000:checked ~ #p-12:checked ~ #t-1_0:checked ~ .calc-results .res-m-50000-p-12-t-1_0{display:block}
-#m-50000:checked ~ #p-12:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-50000-p-12-t-1_0999999999999999{display:block}
-#m-50000:checked ~ #p-24:checked ~ #t-0_95:checked ~ .calc-results .res-m-50000-p-24-t-0_95{display:block}
-#m-50000:checked ~ #p-24:checked ~ #t-1_0:checked ~ .calc-results .res-m-50000-p-24-t-1_0{display:block}
-#m-50000:checked ~ #p-24:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-50000-p-24-t-1_0999999999999999{display:block}
-#m-50000:checked ~ #p-36:checked ~ #t-0_95:checked ~ .calc-results .res-m-50000-p-36-t-0_95{display:block}
-#m-50000:checked ~ #p-36:checked ~ #t-1_0:checked ~ .calc-results .res-m-50000-p-36-t-1_0{display:block}
-#m-50000:checked ~ #p-36:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-50000-p-36-t-1_0999999999999999{display:block}
-#m-50000:checked ~ #p-48:checked ~ #t-0_95:checked ~ .calc-results .res-m-50000-p-48-t-0_95{display:block}
-#m-50000:checked ~ #p-48:checked ~ #t-1_0:checked ~ .calc-results .res-m-50000-p-48-t-1_0{display:block}
-#m-50000:checked ~ #p-48:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-50000-p-48-t-1_0999999999999999{display:block}
-#m-50000:checked ~ #p-60:checked ~ #t-0_95:checked ~ .calc-results .res-m-50000-p-60-t-0_95{display:block}
-#m-50000:checked ~ #p-60:checked ~ #t-1_0:checked ~ .calc-results .res-m-50000-p-60-t-1_0{display:block}
-#m-50000:checked ~ #p-60:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-50000-p-60-t-1_0999999999999999{display:block}
-#m-100000:checked ~ #p-12:checked ~ #t-0_95:checked ~ .calc-results .res-m-100000-p-12-t-0_95{display:block}
-#m-100000:checked ~ #p-12:checked ~ #t-1_0:checked ~ .calc-results .res-m-100000-p-12-t-1_0{display:block}
-#m-100000:checked ~ #p-12:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-100000-p-12-t-1_0999999999999999{display:block}
-#m-100000:checked ~ #p-24:checked ~ #t-0_95:checked ~ .calc-results .res-m-100000-p-24-t-0_95{display:block}
-#m-100000:checked ~ #p-24:checked ~ #t-1_0:checked ~ .calc-results .res-m-100000-p-24-t-1_0{display:block}
-#m-100000:checked ~ #p-24:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-100000-p-24-t-1_0999999999999999{display:block}
-#m-100000:checked ~ #p-36:checked ~ #t-0_95:checked ~ .calc-results .res-m-100000-p-36-t-0_95{display:block}
-#m-100000:checked ~ #p-36:checked ~ #t-1_0:checked ~ .calc-results .res-m-100000-p-36-t-1_0{display:block}
-#m-100000:checked ~ #p-36:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-100000-p-36-t-1_0999999999999999{display:block}
-#m-100000:checked ~ #p-48:checked ~ #t-0_95:checked ~ .calc-results .res-m-100000-p-48-t-0_95{display:block}
-#m-100000:checked ~ #p-48:checked ~ #t-1_0:checked ~ .calc-results .res-m-100000-p-48-t-1_0{display:block}
-#m-100000:checked ~ #p-48:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-100000-p-48-t-1_0999999999999999{display:block}
-#m-100000:checked ~ #p-60:checked ~ #t-0_95:checked ~ .calc-results .res-m-100000-p-60-t-0_95{display:block}
-#m-100000:checked ~ #p-60:checked ~ #t-1_0:checked ~ .calc-results .res-m-100000-p-60-t-1_0{display:block}
-#m-100000:checked ~ #p-60:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-100000-p-60-t-1_0999999999999999{display:block}
-#m-150000:checked ~ #p-12:checked ~ #t-0_95:checked ~ .calc-results .res-m-150000-p-12-t-0_95{display:block}
-#m-150000:checked ~ #p-12:checked ~ #t-1_0:checked ~ .calc-results .res-m-150000-p-12-t-1_0{display:block}
-#m-150000:checked ~ #p-12:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-150000-p-12-t-1_0999999999999999{display:block}
-#m-150000:checked ~ #p-24:checked ~ #t-0_95:checked ~ .calc-results .res-m-150000-p-24-t-0_95{display:block}
-#m-150000:checked ~ #p-24:checked ~ #t-1_0:checked ~ .calc-results .res-m-150000-p-24-t-1_0{display:block}
-#m-150000:checked ~ #p-24:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-150000-p-24-t-1_0999999999999999{display:block}
-#m-150000:checked ~ #p-36:checked ~ #t-0_95:checked ~ .calc-results .res-m-150000-p-36-t-0_95{display:block}
-#m-150000:checked ~ #p-36:checked ~ #t-1_0:checked ~ .calc-results .res-m-150000-p-36-t-1_0{display:block}
-#m-150000:checked ~ #p-36:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-150000-p-36-t-1_0999999999999999{display:block}
-#m-150000:checked ~ #p-48:checked ~ #t-0_95:checked ~ .calc-results .res-m-150000-p-48-t-0_95{display:block}
-#m-150000:checked ~ #p-48:checked ~ #t-1_0:checked ~ .calc-results .res-m-150000-p-48-t-1_0{display:block}
-#m-150000:checked ~ #p-48:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-150000-p-48-t-1_0999999999999999{display:block}
-#m-150000:checked ~ #p-60:checked ~ #t-0_95:checked ~ .calc-results .res-m-150000-p-60-t-0_95{display:block}
-#m-150000:checked ~ #p-60:checked ~ #t-1_0:checked ~ .calc-results .res-m-150000-p-60-t-1_0{display:block}
-#m-150000:checked ~ #p-60:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-150000-p-60-t-1_0999999999999999{display:block}
-#m-200000:checked ~ #p-12:checked ~ #t-0_95:checked ~ .calc-results .res-m-200000-p-12-t-0_95{display:block}
-#m-200000:checked ~ #p-12:checked ~ #t-1_0:checked ~ .calc-results .res-m-200000-p-12-t-1_0{display:block}
-#m-200000:checked ~ #p-12:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-200000-p-12-t-1_0999999999999999{display:block}
-#m-200000:checked ~ #p-24:checked ~ #t-0_95:checked ~ .calc-results .res-m-200000-p-24-t-0_95{display:block}
-#m-200000:checked ~ #p-24:checked ~ #t-1_0:checked ~ .calc-results .res-m-200000-p-24-t-1_0{display:block}
-#m-200000:checked ~ #p-24:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-200000-p-24-t-1_0999999999999999{display:block}
-#m-200000:checked ~ #p-36:checked ~ #t-0_95:checked ~ .calc-results .res-m-200000-p-36-t-0_95{display:block}
-#m-200000:checked ~ #p-36:checked ~ #t-1_0:checked ~ .calc-results .res-m-200000-p-36-t-1_0{display:block}
-#m-200000:checked ~ #p-36:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-200000-p-36-t-1_0999999999999999{display:block}
-#m-200000:checked ~ #p-48:checked ~ #t-0_95:checked ~ .calc-results .res-m-200000-p-48-t-0_95{display:block}
-#m-200000:checked ~ #p-48:checked ~ #t-1_0:checked ~ .calc-results .res-m-200000-p-48-t-1_0{display:block}
-#m-200000:checked ~ #p-48:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-200000-p-48-t-1_0999999999999999{display:block}
-#m-200000:checked ~ #p-60:checked ~ #t-0_95:checked ~ .calc-results .res-m-200000-p-60-t-0_95{display:block}
-#m-200000:checked ~ #p-60:checked ~ #t-1_0:checked ~ .calc-results .res-m-200000-p-60-t-1_0{display:block}
-#m-200000:checked ~ #p-60:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-200000-p-60-t-1_0999999999999999{display:block}
-#m-300000:checked ~ #p-12:checked ~ #t-0_95:checked ~ .calc-results .res-m-300000-p-12-t-0_95{display:block}
-#m-300000:checked ~ #p-12:checked ~ #t-1_0:checked ~ .calc-results .res-m-300000-p-12-t-1_0{display:block}
-#m-300000:checked ~ #p-12:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-300000-p-12-t-1_0999999999999999{display:block}
-#m-300000:checked ~ #p-24:checked ~ #t-0_95:checked ~ .calc-results .res-m-300000-p-24-t-0_95{display:block}
-#m-300000:checked ~ #p-24:checked ~ #t-1_0:checked ~ .calc-results .res-m-300000-p-24-t-1_0{display:block}
-#m-300000:checked ~ #p-24:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-300000-p-24-t-1_0999999999999999{display:block}
-#m-300000:checked ~ #p-36:checked ~ #t-0_95:checked ~ .calc-results .res-m-300000-p-36-t-0_95{display:block}
-#m-300000:checked ~ #p-36:checked ~ #t-1_0:checked ~ .calc-results .res-m-300000-p-36-t-1_0{display:block}
-#m-300000:checked ~ #p-36:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-300000-p-36-t-1_0999999999999999{display:block}
-#m-300000:checked ~ #p-48:checked ~ #t-0_95:checked ~ .calc-results .res-m-300000-p-48-t-0_95{display:block}
-#m-300000:checked ~ #p-48:checked ~ #t-1_0:checked ~ .calc-results .res-m-300000-p-48-t-1_0{display:block}
-#m-300000:checked ~ #p-48:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-300000-p-48-t-1_0999999999999999{display:block}
-#m-300000:checked ~ #p-60:checked ~ #t-0_95:checked ~ .calc-results .res-m-300000-p-60-t-0_95{display:block}
-#m-300000:checked ~ #p-60:checked ~ #t-1_0:checked ~ .calc-results .res-m-300000-p-60-t-1_0{display:block}
-#m-300000:checked ~ #p-60:checked ~ #t-1_0999999999999999:checked ~ .calc-results .res-m-300000-p-60-t-1_0999999999999999{display:block}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+.kpis .kpi{background:var(--color-surface);border:1px solid #e6edf0;border-radius:14px;padding:14px}
+.kpi .lbl{color:var(--color-muted);font-size:.9rem}
+.kpi .val{font-weight:800;font-size:1.25rem}
+
+.table-amort{width:100%;border-collapse:separate;border-spacing:0 8px;margin-top:12px}
+.table-amort th, .table-amort td{padding:10px 12px;text-align:right}
+.table-amort th:first-child,.table-amort td:first-child{text-align:left}
+.table-amort tbody tr{background:var(--color-surface);border:1px solid #e6edf0}
+.table-amort tbody tr td{border-top:1px solid #eef3f6}
+
+.amort-wrap{margin-top:16px}
+.amort-header{display:flex;justify-content:space-between;align-items:center}
+.amort-header h3{margin:0}
+.toggle-btn{border:1px solid #cbd6dc;background:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+
+.badge{display:inline-block;background:#eef6f8;color:var(--color-primary-600);border:1px solid #d7e7ed;border-radius:999px;padding:4px 8px;font-size:.85rem;font-weight:600}
+
+@media (max-width: 960px){
+  .calc-row{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
+}

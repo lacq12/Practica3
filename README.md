@@ -1,6 +1,6 @@
-# Banco Estudiantil (HTML + CSS)
+# Banco Estudiantil (HTML + CSS + JS)
 
-Sitio estático con navegación, **carrusel sin JS**, **calculadora sin JS**, productos (Préstamos, Becas, Maestrías), Centro de ayuda, Contacto y Términos.
+Sitio estático con navegación, **carrusel sin JS**, **calculadora interactiva (vanilla JS)**, productos (Préstamos, Becas, Maestrías), Centro de ayuda, Contacto y Términos.
 
 ## Estructura
 ```
@@ -17,6 +17,8 @@ Sitio estático con navegación, **carrusel sin JS**, **calculadora sin JS**, pr
 └─ assets/
    ├─ css/
    │  └─ styles.css
+   ├─ js/
+   │  └─ calculadora.js
    └─ img/
       └─ logo-banco-estudiantil.svg
 ```
@@ -28,9 +30,9 @@ Sitio estático con navegación, **carrusel sin JS**, **calculadora sin JS**, pr
 4. Selecciona la rama **main** y la carpeta **root**.
 5. Guarda y espera el enlace público.
 
-Notas:
+### Notas
 - Carrusel implementado con **radios + CSS**.
-- Calculadora implementada con **radios + CSS** (combinación de hermanos `~`).
+- Calculadora con **controles deslizantes** y **resultados en tiempo real** (JS ligero).
 - Paleta ajustable en `assets/css/styles.css`.
 
 © 2026 Banco Estudiantil — Demostrativo.
