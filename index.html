@@ -13,7 +13,7 @@
   <header class="topbar" role="banner" aria-label="Encabezado">
     <div class="container flex between center">
       <a class="logo" href="index.html" aria-label="Ir al inicio">
-        <span class="logo-mark" aria-hidden="true">🎓</span>
+        <img class="logo-img" src="assets/img/logo-banco-estudiantil.svg" alt="" width="32" height="32" />
         <span class="logo-text">Banco <strong>Estudiantil</strong></span>
       </a>
 
@@ -37,37 +37,57 @@
     </div>
   </header>
   <main id="contenido" tabindex="-1">
-
     <section class="hero" aria-label="Sección destacada">
-      <div class="container grid hero-grid">
-        <div class="hero-text">
-          <h1>Financia tus estudios con tranquilidad</h1>
-          <p>Préstamos académicos flexibles, becas y opciones para maestrías. Todo en un solo lugar.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="prestamos.html">Ver préstamos</a>
-            <a class="btn btn-secondary" href="becas.html">Explorar becas</a>
+      <div class="container">
+        <div class="carousel" role="region" aria-label="Promociones" aria-live="polite">
+          <!-- Controles (radios) -->
+          <input type="radio" name="carousel" id="slide-1" checked>
+          <input type="radio" name="carousel" id="slide-2">
+          <input type="radio" name="carousel" id="slide-3">
+
+          <!-- Slides -->
+          <div class="slides">
+            <article class="slide slide-1">
+              <div class="slide-content">
+                <h1>Préstamos para tu carrera</h1>
+                <p>Cuotas cómodas, periodo de gracia y asesoría personalizada.</p>
+                <div class="actions">
+                  <a class="btn btn-primary" href="prestamos.html">Solicitar ahora</a>
+                  <a class="btn btn-ghost" href="prestamos.html#detalles">Ver condiciones</a>
+                </div>
+              </div>
+            </article>
+            <article class="slide slide-2">
+              <div class="slide-content">
+                <h1>Becas y alianzas</h1>
+                <p>Convocatorias activas y enlaces con instituciones académicas.</p>
+                <div class="actions">
+                  <a class="btn btn-secondary" href="becas.html">Ver becas</a>
+                  <a class="btn btn-ghost" href="ayuda.html#preguntas">Preguntas frecuentes</a>
+                </div>
+              </div>
+            </article>
+            <article class="slide slide-3">
+              <div class="slide-content">
+                <h1>Maestrías y posgrados</h1>
+                <p>Cofinanciamiento y apoyo en procesos de admisión.</p>
+                <div class="actions">
+                  <a class="btn btn-primary" href="maestrias.html">Explorar opciones</a>
+                  <a class="btn btn-outline" href="contacto.html">Habla con un asesor</a>
+                </div>
+              </div>
+            </article>
           </div>
-        </div>
-        <div class="hero-card" role="region" aria-label="Calculadora simple">
-          <h3>Simulador rápido</h3>
-          <form class="simulador" onsubmit="return false" aria-describedby="sim-note">
-            <label>Monto estimado
-              <input type="number" placeholder="RD$ 100,000" aria-label="Monto del préstamo" />
-            </label>
-            <label>Plazo
-              <select aria-label="Plazo del préstamo">
-                <option>12 meses</option>
-                <option>24 meses</option>
-                <option>36 meses</option>
-              </select>
-            </label>
-            <p id="sim-note" class="note">* Estimación referencial. Consulta condiciones en detalle.</p>
-            <a href="prestamos.html#detalles" class="btn btn-ghost">Ver condiciones</a>
-          </form>
+
+          <!-- Dots de navegación -->
+          <div class="dots" aria-label="Navegación de carrusel">
+            <label for="slide-1" aria-label="Ir a la promoción 1"></label>
+            <label for="slide-2" aria-label="Ir a la promoción 2"></label>
+            <label for="slide-3" aria-label="Ir a la promoción 3"></label>
+          </div>
         </div>
       </div>
     </section>
-
     <section class="features" aria-label="Productos destacados">
       <div class="container grid cards">
         <article class="card">
@@ -87,7 +107,6 @@
         </article>
       </div>
     </section>
-
     <section class="help" aria-label="Soporte">
       <div class="container grid help-grid">
         <div>
@@ -102,8 +121,6 @@
         </ul>
       </div>
     </section>
-
-  
   </main>
   <footer class="site-footer" role="contentinfo">
     <div class="container grid footer-grid">
