@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Banco Estudiantil: préstamos académicos, becas y maestrías para impulsar tu educación." />
+  <title>Banco Estudiantil</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><rect width='128' height='128' rx='24' fill='%230a4d68'/><text x='64' y='86' font-size='76' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'>BE</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar" role="banner" aria-label="Encabezado">
+    <div class="container flex between center">
+      <a class="logo" href="index.html" aria-label="Ir al inicio">
+        <span class="logo-mark" aria-hidden="true">🎓</span>
+        <span class="logo-text">Banco <strong>Estudiantil</strong></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li class="has-dropdown"><a href="#">Productos</a>
+            <ul class="dropdown">
+              <li><a href="prestamos.html">Préstamos académicos</a></li>
+              <li><a href="becas.html">Becas</a></li>
+              <li><a href="maestrias.html">Maestrías</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ayuda.html">Ayuda</a></li>
+          <li><a href="contacto.html" class="btn btn-cta">Hazte cliente</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" tabindex="-1">
+
+    <section class="hero" aria-label="Sección destacada">
+      <div class="container grid hero-grid">
+        <div class="hero-text">
+          <h1>Financia tus estudios con tranquilidad</h1>
+          <p>Préstamos académicos flexibles, becas y opciones para maestrías. Todo en un solo lugar.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="prestamos.html">Ver préstamos</a>
+            <a class="btn btn-secondary" href="becas.html">Explorar becas</a>
+          </div>
+        </div>
+        <div class="hero-card" role="region" aria-label="Calculadora simple">
+          <h3>Simulador rápido</h3>
+          <form class="simulador" onsubmit="return false" aria-describedby="sim-note">
+            <label>Monto estimado
+              <input type="number" placeholder="RD$ 100,000" aria-label="Monto del préstamo" />
+            </label>
+            <label>Plazo
+              <select aria-label="Plazo del préstamo">
+                <option>12 meses</option>
+                <option>24 meses</option>
+                <option>36 meses</option>
+              </select>
+            </label>
+            <p id="sim-note" class="note">* Estimación referencial. Consulta condiciones en detalle.</p>
+            <a href="prestamos.html#detalles" class="btn btn-ghost">Ver condiciones</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Productos destacados">
+      <div class="container grid cards">
+        <article class="card">
+          <h3>Préstamos académicos</h3>
+          <p>Financiamiento para licenciaturas, tecnicaturas y diplomados con tasas preferenciales.</p>
+          <a class="link" href="prestamos.html">Más información →</a>
+        </article>
+        <article class="card">
+          <h3>Becas</h3>
+          <p>Accede a convocatorias y alianzas con instituciones educativas nacionales e internacionales.</p>
+          <a class="link" href="becas.html">Ver becas →</a>
+        </article>
+        <article class="card">
+          <h3>Maestrías</h3>
+          <p>Opciones de cofinanciamiento y apoyo para programas de posgrado y especializaciones.</p>
+          <a class="link" href="maestrias.html">Descubrir →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="help" aria-label="Soporte">
+      <div class="container grid help-grid">
+        <div>
+          <h2>¿Necesitas ayuda?</h2>
+          <p>Consulta preguntas frecuentes, requisitos y vías de contacto.</p>
+          <a class="btn btn-outline" href="ayuda.html">Centro de ayuda</a>
+        </div>
+        <ul class="help-list">
+          <li><a href="ayuda.html#requisitos">Requisitos generales</a></li>
+          <li><a href="ayuda.html#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </section>
+
+  
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container grid footer-grid">
+      <section>
+        <h4>Banco Estudiantil</h4>
+        <p>Impulsamos tu futuro con soluciones educativas: préstamos, becas y maestrías.</p>
+      </section>
+      <section>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="prestamos.html">Préstamos académicos</a></li>
+          <li><a href="becas.html">Becas</a></li>
+          <li><a href="maestrias.html">Maestrías</a></li>
+          <li><a href="ayuda.html">Centro de ayuda</a></li>
+        </ul>
+      </section>
+      <section>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@bancoestudiantil.edu.do">info@bancoestudiantil.edu.do</a></li>
+          <li><a href="contacto.html">Formulario de contacto</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container legal">
+      <small>© 2026 Banco Estudiantil. Sitio demostrativo para fines educativos.</small>
+    </div>
+  </footer>
+</body>
+</html>
